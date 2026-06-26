@@ -378,7 +378,7 @@
       <div class="tap-hint">( tap the gift ✨ )</div>
     </div>
   </section>
-  
+
   <!-- SCENE 2: MESSAGE -->
   <section class="scene" id="scene-message">
     <div class="scene-inner">
@@ -523,7 +523,7 @@
     giftBox.classList.add('popped');
     launchConfetti(70);
     setTimeout(()=>{
-      switchScene(sceneGift, sceneSurprise);
+      switchScene(sceneGift, sceneMessage);
     }, 420);
   }
   giftBox.addEventListener('click', openGift);
@@ -532,14 +532,14 @@
   });
 
   // ---- Scene 2 -> 3 (message) ----
-  finalBtn.addEventListener('click', ()=>{
-    switchScene(sceneSurprise, sceneMessage);
+  toFinaleBtn.addEventListener('click', ()=>{
+    switchScene(sceneMessage, sceneSurprise);
     launchBalloons();
   });
 
   // ---- Scene 3 -> 4 (finale) ----
-  toFinaleBtn.addEventListener('click', ()=>{
-    switchScene(sceneMessage, sceneFinale);
+  finalBtn.addEventListener('click', ()=>{
+    switchScene(sceneSurprise, sceneFinale);
     launchConfetti(140);
     launchBalloons();
   });
